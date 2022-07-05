@@ -82,7 +82,7 @@ def biggestContour(contours):
     return edges, max_area
 
 
-def splitBoxes(img):
+def split(img):
     rows = np.vsplit(img, 9)
     boxes = []
     for r in rows:
@@ -122,7 +122,6 @@ for r in rows:
     cols = np.hsplit(r, 9)
     for box in cols:
         boxes.append(box)
-print("Successfully split images")
 
 
 numbers = []
